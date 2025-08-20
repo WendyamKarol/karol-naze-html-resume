@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="Content-Language" content="fr-FR" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CV — Karol NAZE</title>
+  <style>
+    :root{
+      --font-family: Cambria, "Times New Roman", Times, serif;
+      --font-size: 10.9pt;
+      --line: 1.25;
+      --text: #111;
+      --muted: #555;
+      --accent: darkblue;
+      --rule: #d9d9d9;
+      --pad: 9mm;
+      --gap: 2mm;
+      --section-gap: 4mm;
+    }
+
+    @media screen{
+      html,body{height:100%}
+      body{margin:0; background:#f4f5f7; padding:20px}
+      .page{width:210mm; min-height:297mm; margin:0 auto; background:white; box-shadow:0 10px 30px rgba(0,0,0,.12)}
+    }
+
+    @media print{
+      @page{ size:A4; margin:0 }
+      html,body{width:210mm;height:297mm}
+      body{margin:0;background:transparent}
+      .page{ box-shadow:none }
+      .page{ --font-size:10.7pt; --line:1.22 }
+      .no-break{ break-inside: avoid; page-break-inside: avoid; }
+    }
+
+    *{ box-sizing:border-box }
+    .page{ font-family:var(--font-family); font-size:var(--font-size); line-height:var(--line); color:var(--text); padding:var(--pad); -webkit-print-color-adjust:exact; print-color-adjust:exact; -webkit-font-smoothing:antialiased; hyphens:auto; }
+    h1,h2,h3{ margin:0; line-height:1.1; text-align:center }
+    h1{ font-size:19pt; font-weight:700; letter-spacing:.02em }
+    h2{ font-size:11.5pt; font-weight:700; color:var(--accent); text-transform:uppercase; letter-spacing:.04em; margin-top:3mm; margin-bottom:1.5mm }
+    h3{ font-size:11.2pt; font-weight:700 }
+    p{ margin:0 }
+    ul{ margin:0; padding-left:4mm }
+    li{ margin:0; line-height:1.2 }
+    .muted{ color:var(--muted) }
+    .small{ font-size:9.6pt }
+
+    .stack{ display:flex; flex-direction:column; gap:var(--gap) }
+    .section{ margin-top:var(--section-gap) }
+    .rule{ height:1px; background:var(--rule); margin: var(--gap) 0 }
+    .row{ display:flex; align-items:baseline; justify-content:space-between; gap:4mm }
+    .header .title{ font-weight:600 }
+    .contact{ display:flex; flex-wrap:wrap; gap:3mm 6mm }
+    .contact a{ color:inherit; text-decoration:none }
+    .tight p,.tight li{ margin:0 }
+    .tight .item{ margin-bottom:1mm }
+    .item{ break-inside:avoid; page-break-inside:avoid }
+
+    /* Ajustements compacité */
+    .section.skills .stack,
+    .section.complementaires .stack { gap:0 }
+    .section.skills .item,
+    .section.complementaires .item { display:inline }
+    .section.skills .item:not(:last-child)::after,
+    .section.complementaires .item:not(:last-child)::after { content:" · " }
+    .section.experiences .item { margin-bottom:2mm }
+  </style>
+</head>
+<body>
+  <div class="page tight">
+    <header class="header stack">
+      <div class="row">
+        <h1>Karol NAZE</h1>
+        <span class="small muted">France</span>
+      </div>
+      <div class="row">
+        <div class="title">Software Engineer – Backend & IA</div>
+        <div class="contact small">
+          <a href="mailto:w.karolnaze@gmail.com">w.karolnaze@gmail.com</a>
+          <span>·</span>
+          <a href="tel:+33765745766">+33 7 65 74 57 66</a>
+          <span>·</span>
+          <a href="https://www.linkedin.com/in/karol-naze/">linkedin.com/in/karol-naze</a>
+        </div>
+      </div>
+      <div class="rule"></div>
+    </header>
+
+    <section aria-label="Résumé" class="section">
+      <p>
+        Ingénieur logiciel spécialisé en Data & Intelligence Artificielle, avec expérience grands comptes (EDF, TYPSA, BMCE). Résultats : optimisation backend, intégration IA générative (RAG, OCR, LLM), réduction du temps de recherche documentaire. Curieux et orienté résultats, vise un rôle backend avec spécialisation IA en environnement cloud.
+      </p>
+    </section>
+
+    <section class="section skills">
+      <h2>Compétences clés</h2>
+      <div class="stack">
+        <div class="item"><strong>Backend :</strong> Python (FastAPI, Flask, Django), Java (Spring Boot), Node.js, REST</div>
+        <div class="item"><strong>IA & Data :</strong> LLM, LangChain, OCR, TensorFlow, PyTorch, Pandas, NumPy, Data Visualization</div>
+        <div class="item"><strong>Cloud & DevOps :</strong> Azure, AWS (EC2/S3), Docker, Kubernetes, CI/CD, SQL / NoSQL</div>
+      </div>
+    </section>
+
+    <section class="section experiences">
+      <h2>Expériences professionnelles</h2>
+      <div class="stack">
+        <article class="item">
+          <div class="row">
+            <h3>CGI — Ingénieur IA</h3>
+            <span class="small muted">03/2024 – 09/2024 · France</span>
+          </div>
+          <ul>
+            <li>CDéveloppement d’une application IA générative pour EDF au sein d’une équipe agile (4 personnes) :</li>
+            <li>Agent IA conversationnel réduisant ~70% du temps moyen de recherche (≈10 min gagnées/requête).</li>
+            <li>Optimisation de prompts : +25% de précision des réponses.</li>
+            <li>Pipeline OCR (PyTorch + TensorFlow) : 94% de reconnaissance sur 200+ documents.</li>
+          </ul>
+        </article>
+
+        <article class="item">
+          <div class="row">
+            <h3>Projets Data & IA — R&D personnelle</h3>
+            <span class="small muted">2024 – 2025 · France</span>
+          </div>
+          <ul>
+            <li><em>Infrastructure Optimizer</em> : détection d’anomalies + recommandations en temps réel.</li>
+            <li><em>Moteur multimodal</em> : extraction texte/image avec GPT-4o Vision.</li>
+            <li><em>Assistant formation</em> : recommandation de parcours d’onboarding.</li>
+            <li class="small">Stack : Python, LangChain, FAISS, React, FastAPI, Azure Cognitive Services · Portfolio : github.com/WendyamKarol</li>
+          </ul>
+        </article>
+
+        <article class="item">
+          <div class="row">
+            <h3>Grupo TYPSA — Software Engineer</h3>
+            <span class="small muted">06/2023 – 09/2023 · Espagne</span>
+          </div>
+          <ul>
+            <li>Projet de modernisation d’outils analytiques internes en contexte international agile.</li>
+            <li>Migration VBA → Python : +120 h/an de productivité pour l’équipe d’analystes.</li>
+            <li>Optimisation backend Django : 2,5s → 1,5s (−40%).</li>
+            <li>CI/CD + tests automatisés : 0 bug critique en production.</li>
+          </ul>
+        </article>
+
+        <article class="item">
+          <div class="row">
+            <h3>EC Data Consulting — Software Engineer</h3>
+            <span class="small muted">07/2022 – 09/2022 · France (BMCE Bank)</span>
+          </div>
+          <ul>
+            <li>Refactor Java selon Clean Code & TDD : −25% de dette technique.</li>
+            <li>Maquettes UI/UX améliorant l’ergonomie des analystes métier.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="section complementaires">
+      <h2>Compétences complémentaires</h2>
+      <div class="stack">
+        <div class="item"><strong>Programmation & Scripting :</strong> C, C++, Bash, MATLAB</div>
+        <div class="item"><strong>Qualité logicielle :</strong> OOP, conception modulaire, Clean Code, CI/CD, benchmarking, code review, TU, doc</div>
+        <div class="item"><strong>Frontend :</strong> React, HTML/CSS, Figma</div>
+        <div class="item"><strong>Gestion de projet & Collaboration :</strong> Agile/Scrum, Jira, Trello, GitLab/GitHub Projects, Slack</div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Points forts</h2>
+      <p>Adaptabilité · Résolution de problèmes complexes · Collaboration interculturelle · Rigueur</p>
+    </section>
+
+    <section class="section">
+      <h2>Formation</h2>
+      <div class="stack">
+        <article class="item">
+          <div class="row">
+            <h3>Diplôme d’Ingénieur — Systèmes Informatiques Embarqués</h3>
+            <span class="small muted">2021 – 2024 · Paris, France</span>
+          </div>
+          <p class="small">École d’Ingénieur Denis Diderot / Université Paris Cité · PFE : Chatbot IA + OCR (Python, LangChain, Tesseract)</p>
+        </article>
+        <article class="item">
+          <div class="row">
+            <h3>Classes Préparatoires — MPSI option GE & Systèmes Embarqués</h3>
+            <span class="small muted">2019 – 2021 · UEMF, Maroc</span>
+          </div>
+          <p class="small">Université Euro-méditerranéenne de Fès — Classée n°1 Maroc & n°2 Afrique (Round University Ranking 2025)</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+  <h2>Informations complémentaires</h2>
+  <p><strong>Langues :</strong> Français (natif), Anglais (courant – TOEIC 860/990), Espagnol (B1)<br>
+  <strong>Certifications :</strong> Microsoft Azure AI Engineer (2024) · AWS Cloud Practitioner · Columbia — AI Through Visualization (2025)<br>
+  <strong>Loisirs :</strong> Football (milieu central), CrossFit, Voyages, Lecture, Bénévolat (Organisation Aéronautique et Spatiale Africaine – 2025)</p>
+</section>
+  </div>
+</body>
+</html>
